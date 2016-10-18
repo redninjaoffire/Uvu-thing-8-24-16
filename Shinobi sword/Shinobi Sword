@@ -1,0 +1,78 @@
+<html>
+<p>Shinobi Sword</p>
+<script>
+alert("Shinobi Sword");
+var player = prompt("What is your name?");
+var gameStart = confirm("are you ready to start your quest " + player + "?");
+function game(){
+    function secret(){
+        alert("You who weilds the shinobi swords come.");
+
+    }
+    function dead(){
+        alert("'I don't know which one to pick...'You then feel a piercing pain in your kidney and fall over dead. THE END ☺");
+    }
+        function castle(){
+            alert("You started walking to the Castle thinking you can find some supplies.");
+         var blacksmith = prompt("You walk into the castle gates and find the mark of the ninja (忍) on a large building you go inside and find a old blacksmith. He looks at you and asks 'I assume you are looking for some weapons?' 'Yes' you reply. He then shows you a door and you go in to see a wall with many diffrent Ninja related weapons. (Ninjato, Bo staff, Nunchucku, Sai, Kama,) ");
+         if(blacksmith = "ninjato"|| blacksmith == "Ninjato"){
+             alert("'I will choose the Ninjato.'You state.");
+             else if (blacksmith == "Bo staff"){
+  alert("'I will choose the Bo staff.'You state.");
+}
+else if (blacksmith == "Nunchucku"){
+  alert("'I will choose the Nunchucku.'You state.");
+}  
+else if (blacksmith == "Sai"){
+  alert("'I will choose the Sai.'You state.");
+}
+else if (blacksmith == "Kama"){
+  alert("'I will choose the Kama.'You state.");
+}    
+else {
+  dead();
+         }
+        
+    }
+        function village(){
+            alert("You start walking to the Village thinking you can complete your training.");
+        
+    }
+        function forest(){
+            alert("You start walking to the Forest as if drawn to it.");
+        
+    }
+    var path1 = prompt("You enter at the cross roads near the ancient Hara Castle. You look around and notice a forest and a small village. What do you do?  (Castle, Forest, Village.)");
+
+    if(path1 == "Secret"){
+        secret();
+    }
+    else if (path1 == "Castle" ){
+        castle();
+    }    
+    else if (path1 == "Village"){
+        village();
+}
+    else if (path1 == "Forest" ){
+        forest();
+}
+else{
+
+}
+}
+function endGame(){
+    alert("Very well, may your life be long and prosperous.")
+}
+/* Start Game */
+if(gameStart){
+    game("Excellent your training begins now.");
+}
+else{
+    endGame();
+}
+
+
+
+
+</script>
+</html>
