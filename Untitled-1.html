@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+
+
+
+
+<script id="jsbin-source-javascript" type="text/javascript">/* Choose your own adventure game v0.1 */
+alert("Welcome to the world of 忍び 剣 (Shinobi Sword). (please note that every answer needs to be uppercased:ex Ninja) and take notes on which shinobi swords you find, they will be important.");
+var name = prompt("What is your name grasshopper?","Ninja");
+var mission = confirm("Are you sure ready to begin your training, "+ name+ "?");
+if (mission === true)
+  {
+    alert ("Excellent your training begins now.");
+   }else{
+    alert ("Too bad you have too do it.")
+   
+   }
+//the begining of the game
+var begining;
+var path = prompt("You enter at the cross roads near the ancient Hara Castle. You look around and notice a forest and a small village. What do you do?  (Castle, Forest, Village.)");
+switch(path){
+  case "Secret":  
+begining = "Secret";
+document.write("You went towards the mysterious door.");
+    var dejavu = alert("You suddenly realise you have been here before, and some memories appear in your mind, and just like that you remember the Shinobi Swords.You turn around and there all 5 are. Looking past them you see a door with 5 slots in it." );
+   mysteriousdoor()
+    function mysteriousdoor(){
+ 
+ var insertswords = prompt ("Each slot has a number in the order 'wisdom,healing,compassion,cunning,honor'. 'What could this mean?' you think for a moment, and realise each of the slots can fit a sword in it but what order do you do? (put in the swords type that corrisponds with the number ex name=#. and typed like this 1+2+3+4+5.)");
+      if (insertswords =="1+5+4+2+3")  {
+					dooropens(); 
+      }else{{
+alert("You insert the swords in that order but nothing happens.");
+mysteriousdoor()
+}}
+     function dooropens (){
+     var enter = alert("When you put the swords in the door opens to reveal a strange bright light. Feeling drawn to the light you go in.");
+       var truth = prompt("You awake in a strange room full of computers and wires. And everything hits you. The world you where in was not the true world. You get out of the strange container that you where asleep in you then sneak out of the room and notice 2 guards with dangerous looking LaserBlades. What do you do (Approach, Leave,)")
+ if(truth == "Approach"){
+  alert("'Hey where am I?' you state as you walk towards them. They turn around and shoot you with a electric bolt and you pass out. ");
+   document.write("You got captured and imprisoned on the ship. And unfortunately you also died of starvation cause they where celebrating all the guards birthdays with a song.");
+     }     
+      else if (truth == "Leave"){
+   alert("You know these two mean trouble so you slowly sneak away.");
+document.write("You snuck past the guards.");
+            var armory = alert("As you move the oppisite direction of the guards you encounter the armory. Moving into it you spot a familiar looking suit of armor and head towards it. as you approach it suddenly turns on and opens up. You decide to get in.");
+    
+    var yourback = alert("'"+name + " recognised equiping Shinobi frame armor.' ");
+    var Letsgo = alert("After you get your armor, you remember that what happend. You had infiltrated a ship to try and steal information. Got captured and put into a simulation so they could learn your secrets. 'This is bad, I'll have to eliminate the commander to get everything back.'")
+    var hallway = prompt("As you run through the hallway you hear the alarms go off, and guards appear they begin to aim at you what do you do?(Throw,Block,)");
+ if (hallway == "Throw"){
+   alert("You pull out your sword and throw it towards the guards, it stabs one and kills him but the other 19 shoot you.");
+ }var guards = 20;
+while(guards>0){
+  document.write(guards + " guards left.");
+  guards--;
+  if (guards === 0){
+    document.write("Now they are dead.Thats how its done. Sheesh you think a ninja would know this.");
+ break;
+  }else if (hallway == "Block"){
+      alert("You pull out your sword and block all the diffrent shots and start moving forward. In a panic the guards keep shooting and you start refelcting shots back and killing them one by one. when the last one falls, you move on.");
+      var finalshowdown = prompt("You enter a large room with your sword drawn, looking around you see the main computer. Heading for it you suddenly sense a presence and dodge out of the way just in time. Looking up you see the commander, weilding a large hammer and in a strange suit resembling yours. He approaches and says 'I figured you would escape the simulation eventually, no matter this ends here.'He then charges forward. (Right,Left,)")
+      if (finalshowdown == "Right","R"){
+      alert("You dodge to the right and get him with a blow from your sword. He turns around and starts to swing down. You Slide under him and slice the side of his legs in a spin. He then swings ubruptly towards you. You jump over the swing and land on the hammer and stab him in the stomach. He screams with rage and goes to punch you. You dodge and slice down decapitating his arm and then slicing his head off. Going to the computer you extract all the data and locate a escape pod and leave this place.");
+      break;
+      }else{
+        alert("You get hit and fall to the ground and he smashes your head in.");
+        document.write("So close and yet so far.")
+        break;
+      }    
+        
+      }else{
+      alert("You fumble with your sword and get it out and when it turns on... you had it the wrong way and stabbed your self.");
+    document.write("Watch where your pointing that thing you idiot!You stabbed yourself and died THE END☺");
+   break;
+      }
+  }
+      }
+else{
+alert("Your room suddenly explodes due to the new security system they added and you died. THE END ☺");
+  document.write("If you had moved it wouldn't of noticed.");
+}
+   
+     } }
+              var equipment = {
+  Myname:""+name+"",          
+  yourarmor:"Mk-1 Shinobi frame",
+  herosweopon: "Laser Blade",
+  SpaceNinja:function(){
+    return this.Myname + ", using your Mk-1 Shinobi frame and your Laser Blade you defeated the enemy and escaped. You are a true ninja!忍☻"
+  }}
+ document.write(equipment.SpaceNinja());
+break;
+case "Castle":
+begining = "Castle";
+document.write("You started walking to the Castle thinking you can find some supplies.");
+    var blacksmith = prompt("You walk into the castle gates and find the mark of the ninja (忍) on a large building you go inside and find a old blacksmith. He looks at you and asks 'I assume you are looking for some weapons?' 'Yes' you reply. He then shows you a door and you go in to see a wall with many diffrent Ninja related weapons. (Ninjato, Bo staff, Nunchucku, Sai, Kama,) ")
+if(blacksmith == "Ninjato"){
+  alert("'I will choose the Ninjato.'You state.");
+}
+else if (blacksmith == "Bo staff"){
+  alert("'I will choose the Bo staff.'You state.");
+}
+else if (blacksmith == "Nunchucku"){
+  alert("'I will choose the Nunchucku.'You state.");
+}  
+else if (blacksmith == "Sai"){
+  alert("'I will choose the Sai.'You state.");
+}
+else if (blacksmith == "Kama"){
+  alert("'I will choose the Kama.'You state.");
+}    
+else {
+  alert("'I don't know which one to pick...'You then feel a piercing pain in your kidney and fall over dead. THE END ☺");
+  document.write("The blacksmith killed you cause your an idiot.");  
+  break;
+}
+document.write("You have chosen the " + blacksmith + ".");
+    var siege = prompt("You then hear the warning go off and run out to see what it is. 'We have come to rid Japan of those demon spawned ninja!' you see a Samurai Shogun with his army marching towards the castle gates, what do you do? (Fight, Runaway, Trick,)");
+if(siege == "Fight"){
+  alert("You pull out your " + blacksmith + " and charge towards the enemy with a large number of fellow ninja behind you, unfortunately you and all your comrades are killed.");
+    document.write("You where in the battle for Hara castle as one of the last ninja.");
+}
+  else if (siege == "Runaway"){
+  alert("You know this is a futile fight and run towards the wall and use your grapple to get over and head into the woods. You then notice a bright light in the trees you walk towards it to find a shrine, with a Sword in it. You look closer and see the blade has 忍び 剣 知恵 (Shinobi sword of Wisdom)[1] inscribed on it. You pick it up and feel your choice to avoid death was wise you may be the last Ninja left now, but you will bring them back.");
+document.write("You are the last surviving Ninja, you will work hard to preserve the art of Ninjutsu (忍術) alive and train new Ninja. Great job you got the first Shinobi Sword. try to get all 5.");
+  }
+  else if (siege == "Trick"){
+  alert("You know this fight will end badly if you fight fair, so you check what you have, Shurikens, Smoke bombs, " + blacksmith + ". You decide you must help your fellow ninja in a diffrent way. You Climb up the wall and start raining chaos on the samurai, using shurikens to disarm them and smoke bombs to distract them. The other ninja seize this chance and go in while the samurai are weak. You then notice the shogun running away and start to go after him. As you approach he notices you, and draws his Katana, you then draw your " + blacksmith + ". Knowing you have no chance in a one on one, you then use your last smoke bomb to blind him then go in for the kill. When the smoke clears you notice that there is a shrine nearby. Walking over you see it is has a sword with 忍び 剣 狡猾な (Shinobi sword of Cunning)[2] inscribed on the blade. Picking it up you know that the way of the ninja will last forever.");
+document.write("You changed history and become a legend around Japan, everyone will remember the legendary " + name + " who saved the way of the ninja forever. You earned the second Shinobi Sword keep track of them.");
+  }
+    
+    
+else {
+  alert("You are shot before you can react to the situation you are dead. THE END ☺");
+document.write("You died from a arrow piercing your heart.");
+}
+ break;
+case "Village":
+begining = "Village";
+document.write("You start walking to the Village thinking you can complete your training.");
+    var Choices = prompt("You walk into the village and look around and you see a Old man. Walking up to him, he looks up and states, 'I assume you want to know how to control the elements?' 'Yes, I am " + name +". He looks at you, judgingly. 'Alright which element do you want to control?' (Fire, Water, Air, Earth, Lightning, Light, Shadow,)")
+if(Choices == "Fire"){
+  alert("'Fire.' You state, He then places his hand on your head, and you feel as if your blood turns to lava.");
+}
+else if (Choices == "Water"){
+  alert("'Water.' You state, He then places his hand on your head, and you feel as if your blood turns to ice.");
+}
+else if (Choices == "Air"){
+  alert("'Air.' You state, He then places his hand on your head, and you feel weightless and free.");
+}  
+else if (Choices == "Earth"){
+  alert("'Earth.' You state, He then places his hand on your head, and you feel as if nothing could ever move you.");
+}
+else if (Choices == "Lightning"){
+  alert("'Lightning.' You state, He then places his hand on your head, and you feel full of energy as if you could run forever.");
+}
+else if (Choices == "Light"){
+  alert("'Light.' You state, He then places his hand on your head, and you feel pure and true.");
+}
+else if (Choices == "Shadow"){
+  alert("'Shadow.' You state, He then places his hand on your head, and you feel as dark and malevelant.");
+}
+    else {
+  alert("'I don't know which one to pick...'You then look in his eyes and feel your blood start to bubble up and then ... umm ok thats a little bit gross ok your just dead. THE END ☺");
+  document.write("The Element master killed you because your unbalenced and a idiot.");  
+break;
+}
+document.write("You have chosen the power of " + Choices + ".");
+      var favor = alert("You hold out your hand and a ball of pure " +Choices + " appears. The old man then states,'There is a request I have for you There is a ancient sword in the mountain. I am to old to get it will you retrieve it?', 'Of course.' You reply, he than gives you a handle 'This will allow you to make a sword out of your element, it will protect you.' You nod and start the climb. ");
+    
+    var quest = prompt("After 5 days of climbing you then see a shrine. 'That must be it!', you think to yourself. As you approach you suddenly get hit from behind and are knocked forward. Getting up you turn around to see it is A large samurai. 'That blade belongs to me, Ninja scum, leave now or I will have your head as a trophy!'(Fight, Leave, Trick,)")
+if(quest == "Fight"){
+  alert("You pull out the handle and focus and a blade of pure " + Choices + "appears, and you say, 'I made a promise and I will not break it.'. You then charge forward and he charges towards you with his Katana, You Fight For hours, but the battle ends in a tie. 'You are a honorable warrior' he states, 'I will let you have the sword' He then vanishes and you realise that he was a Ancient Spirit who guarded the sword you walk over and see a sword with 忍び 剣 名誉 (Shinobi sword of Honor)[3] inscribed in the blade. You pick it up and feel proud that you kept your promise and stayed true to yourself.");
+ document.write("You completed the quest and Became a master of the elements you eventually become known as Sensei " +name + " the most Honorable ninja in history. This is the third Shinobi Sword, when you get all 5 secrets will be revealed..");
+}
+  else if (quest == "Leave"){
+  alert("You feel like this is not worth your life and turn to leave when you trip on a rock and fall to your death.");
+document.write("You really tripped up this time. You are forgotten from history and the man is still waiting in the village for you.(He is really old.)");
+  }
+  else if (quest == "Trick"){
+  alert("You think this will go quickly if you cheat, so you shoot a ball of " + Choices + " at him. He blocks it with his Katana and rushes forward and you feel the wind rush by you as he seems to teleport past you. You look down and notice that your tunic is turning red and that you cant move at all, you then realise that you where cut nearly in half, You fall on your back look up and he stares into your eyes and states 'You are not worthy of this blade, your death will be quick.' He then lifts up his sword and plunges it in your face and you see no more.");
+document.write("Your dishonor is what gives ninja a bad name.");
+  }
+  else{
+alert("You get grabbed by a giant bird and taken to its nest for food. THE END ☺");
+document.write("You died and became a giant birds lunch");
+  }
+break;
+ case "Forest":
+begining = "Forest";
+document.write("You start walking to the Forest as if drawn to it");
+    var druidninja = alert("You walk into the Forest and look around. You then hear some bushes rustle and look in the direction of the noise. You spot a large wolf walking toward you. You then start wishing you had a better weapon then some Shurikens and Smoke bombs. As you brace to get mauled, the wolf suddenly stops. You look up and see a old man walk up to you. 'Sorry about that' he states as he offers you a hand. Once you get up you ask 'Who are you?.'He answers, 'Im just live here, with the animals as companions.If im not mistaken your training to be a ninja?' 'Yes I am.' you then notice the wolf watching you and ask 'How can you control that wolf so well?' He laughs, and states with a smile 'I don't control him, he is like part of my family as are all animals in this forest.' He then looks you up and down'Say would you want to learn how to communicate with the animals?'he asks. 'Sure.' you answer more out of curiosity then interest.");
+   var Animal = prompt("After he takes you to his cabin he states 'Which animal are you interested with having as a companion?(Wolf, Deer, Boar, Fox,)")
+if(Animal == "Wolf"){
+  alert("'Wolf.' You state.'Excellent choice.' He then whistles and a large grey Wolf comes into the house.");
+}
+else if (Animal == "Deer"){
+  alert("'Deer.' You state.'Ah very wise.' He then whistles and a large Deer comes into the house.");
+}
+else if (Animal == "Boar"){
+  alert("'Boar.' You state.'Yes a powerful creature this is'. He then whistles and a large brown Boar comes into the house.");
+}  
+else if (Animal == "Fox"){
+  alert("'Fox.' You state.'Of course a cunning creature like this will surely aid you.' He then whistles and red Fox comes into the house.");
+}
+    else {
+  alert("'I don't know which one to pick...'You then look up to see the Wolf Jump up and rip out your throat you are dead. THE END ☺");
+  document.write("The NinjaDruid had his wolf kill you because you don't have enough brains to communicate with animals.");  
+break;
+}
+document.write("You have chosen the animal of " + Animal + "..");
+      var petname = prompt("What do you want to name your "+ Animal +" ? ");
+    
+    var goodmammel = alert("I will name it " + petname + ".");
+    document.write("You have chosen to name your " + Animal +" " + petname + ".");
+      
+    var shifter =prompt("'Now that you have that settled.' He sits down and looks at you.'I will have to teach you how to become turn into a animal.' After a few days he approaches you '" + name +", I have a request for you, there is a injured animal in a cave near here I want you to handle the situation.' 'Ok' you reply, 'Come on " + petname + ". When you make it to the cave with your companion, You notice the injured animal, its a " +Animal+ " just like your companion. What do you do?(Shapeshift, Kill, Heal,)");
+if(shifter == "Shapeshift"){
+  alert("You focus your energy and transform into a " + Animal + ". Then you walk over and ask 'Are you alright?' It looks at you and responds,'I tripped down the hill and broke my leg please help me.' Knowing what to do you quickly transform back and get materials to make a splint. After a hour or so, the " + Animal + "'s leg is binded and set to recover with a look of gratitude it suddenly speaks 'Thank you. You are a compassionate person please take this sword.' It then vanishes and in its place rests a sword with 忍び 剣 思いやり (Shinobi Sword Of Compassion)[4] inscribed in the blade. You head back to the cabin with " + petname + " following right behind you.");
+ document.write("You Healed the Injured animal and became a great Ninja who could control nature itself. You used your powers to help those in pain and suffering to help make Japan a better place. This is the fourth shinobi sword the truth will be revealed.");
+}
+  else if (shifter == "Kill"){
+  alert("You feel like there is nothing you can do to help. As you pull out your knife and ready it to put it out of its misery it looks at you sadly. You raise the knife to stab its spine, suddenly your on the ground in the form of a " + Animal + ". Looking up you see yourself in human form lifting up the knife and you realise that it isn't you anymore the copy then states 'You are not worthy to weild this blade.' and it plunges the knife into your neck and all turns black.");
+document.write("You failed the test and died the death that one as heartless as you deserved.)");
+  }
+  else if (shifter == "Heal"){
+  alert("You figure that if you observe the injury of the " + Animal + " you can heal it, you tell " + petname + " to grab herbs while you examine the " + Animal + "you notice its breathing is getting shallower and search harder but everything looks okay. You then notice it stops breathing and realise your to late. Suddenly you realise that the old man is there, he looks at you and says, 'You tried your best but don't worry you passed the test.' Confused you look back at the dead " + Animal + " and see it standing, perfectly fine it then vanishes. You turn back to the old man and he gives you a sword with 忍び 剣 ヒーリング (Shinobi Sword of Healing)[5] inscribed on the blade. You look up and he says, 'Now lets complete your training.'.");
+document.write("Your ability to communicate with animals increases and you learn to communicate with them, as your skills increased so did your determination to not let another animal die. And you lived a happy long life. This is the fifth and final Shinobi Sword. did you get the rest? If so Type in Secret at the Cross roads.");
+  }
+  else{
+alert("You are kidnapped by bigfoot and eaten for dinner. THE END ☺");
+document.write("You now believe in bigfoot but your also dead too.");
+  }
+break;
+default:
+alert("You are attacked by the First Ninja and are brutally murdered. THE END ☺");
+document.write("You died from the First Ninja.");
+}
+var Jobs = ["Storywriter", "Director", "Typer", "Sensei", "Boss", "Creditscreator",""];
+var Jobs
+Jobs.pop();
+for(i=0;i<6;i++){
+  
+document.write(Jobs[i]+" Curtis Miller");
+}</script></body>
+</html>
